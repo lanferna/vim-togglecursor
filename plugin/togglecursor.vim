@@ -85,6 +85,8 @@ if s:supported_terminal == ""
         let s:supported_terminal = 'xterm'
     elseif $TERM == "rxvt-unicode" || $TERM == "rxvt-unicode-256color"
         let s:supported_terminal = 'xterm'
+    elseif $TERM == "st" || $TERM == "st-256color"
+        let s:supported_terminal = 'xterm'
     elseif str2nr($VTE_VERSION) >= 3900
         let s:supported_terminal = 'xterm'
     elseif s:GetXtermVersion($XTERM_VERSION) >= 252
